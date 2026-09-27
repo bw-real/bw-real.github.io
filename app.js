@@ -39,4 +39,4 @@ input.addEventListener('input',showSuggestions);
 input.addEventListener('focus',showSuggestions);
 input.addEventListener('click',showSuggestions);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){suggestions.hidden=true;input.blur()}if((e.key==='/'||e.key==='?')&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();if(e.key==='/')input.focus();else navigate('HELP')}});
-function tick(){document.querySelector('#clock').textContent=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,timeZone:'America/New_York'}).format(new Date())+' NY'}tick();setInterval(tick,1000);window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});render();
+function tick(){document.querySelector('#clock').textContent=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,timeZone:'America/New_York'}).format(new Date())+' ET'}tick();setInterval(tick,1000);window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});render();
